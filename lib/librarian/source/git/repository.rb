@@ -123,7 +123,7 @@ module Librarian
             reference = "#{remote}/#{reference}"
           end
 
-          command = %W(rev-list #{reference} -1)
+          command = %W(rev-list --all -1 #{reference})
           run!(command, :chdir => true).strip
         end
 
